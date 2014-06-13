@@ -64,6 +64,10 @@ ADD scripts/ scripts/
 
 
 
+# Where shall he listen?
+ENV PORT 5555
+EXPOSE 5555
+
 # Set up Supervisor
 RUN mkdir -p /var/log/supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
