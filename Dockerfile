@@ -1,22 +1,52 @@
-# Docker container for initialising a Hubot
+# Woodhouse, our very own cyborg butler.
 
-# Extend from official Node.js base
-FROM node
+# Extend from official Ubuntu base
+FROM ubuntu
 
 # We maintain this bad boy!
 MAINTAINER Simpla <admin@getsimpla.com>
 
-# Install vanilla HUBOT and coffee-script
+# Keep upstart from complaining
+RUN dpkg-divert --local --rename --add /sbin/initctl
+RUN ln -sf /bin/true /sbin/initctl
+
+# Let the container know that there is no tty
+ENV DEBIAN_FRONTEND noninteractive
+
+# Update everything
+RUN apt-get update
+RUN apt-get -y upgrade
+
+# Install core dependencies
+RUN apt-get install -y wget \
+                       git \
+                       redis-server \
+                       nodejs \
+                       npm \
+                       supervisor \
+                       build-essential \
+                       python \
+                       libexpat1-dev \
+                       libexpat1 \
+                       libicu-dev
+
+# Sanity name node
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+# Install HUBOT engine and coffee-script
 RUN npm install -g hubot coffee-script
 
 # It's alive!
 RUN hubot --create .
 
+# Get Woodhouse settled in
+RUN npm install
+
 # Make sure permissions are okay
-chmod 755 ./bin/hubot
+RUN chmod 755 bin/hubot
 
 # Set up Slack integration
-RUN npm install hubot-slack --save
+RUN npm install  --save hubot-slack
 ENV HUBOT_SLACK_TOKEN v1U13cHqv4AROYgpCig2kYGe
 ENV HUBOT_SLACK_TEAM simpla
 ENV HUBOT_SLACK_BOTNAME Woodhouse
@@ -24,10 +54,9 @@ ENV HUBOT_SLACK_LINK_NAMES 1
 
 # Throw in scripts and plugins
 ADD hubot-scripts.json hubot-scripts.json
-ADD scripts/* scripts/
+ADD scripts/ scripts/
 
 # Install dependencies
-
 
 ######################
 ## Plugin Variables ##
@@ -35,7 +64,12 @@ ADD scripts/* scripts/
 
 
 
+# Set up Supervisor
+RUN mkdir -p /var/log/supervisor
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+# Clean up apt
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Give him a name and start him up!
-CMD ["nohup bin/hubot -n woodhouse"]
+# Start him up! (see supervisord.conf for runtime settings)
+CMD ["supervisord", "-n"]
