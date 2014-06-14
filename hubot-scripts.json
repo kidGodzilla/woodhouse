@@ -1,1 +1,23 @@
-["redis-brain.coffee", "shipit.coffee"]
+[
+"redis-brain.coffee",
+"shipit.coffee",
+"advice.coffee",
+"ambush.coffee",
+"calm-down.coffee",
+"conversation.coffee",
+"dealwithit.coffee",
+"dealwithit.coffee",
+"howdoi.coffee",
+"illogical.coffee",
+"ip.coffee",
+"isup.coffee",
+"meme_captain.coffee",
+"wits.coffee",
+"robot-memes.coffee",
+"eardropping.coffee",
+"announce.coffee",
+"sudo.coffee",
+"urban.coffee",
+"archer.coffee",
+"9gag.coffee"
+]
