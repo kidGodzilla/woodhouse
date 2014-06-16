@@ -16,6 +16,31 @@ Scripting for Woodhouse is very straightforward, and using the basic handlers he
 
 Anything that can be automated programmatically can be automated with Woodhouse, probably in a much more fun and interactive way. So get scripting!
 
+### Some plugin ideas to get the ball rolling...
+
+- Handle commands mid-sentance (trims and processes rest as command)
+
+- Deploy (send to drone and then production)
+
+- Query git project, find latest commit, etc.
+
+- Build status of X project
+
+- Deployment messages, interactive
+
+- Revenue, etc. reports (later)
+
+- Open adminy things (redbooth, admin dash, etc.)
+
+- Hook into Google alerts and alert when Simpla mentioned in press
+
+- Woodhouse redbooth tasks assigned to me
+
+- Woodhouse new redbooth task, etc.
+
+- Interface with servers (backup, etc.)
+
 
 ## Updating
 Woodhouse is deployed as a Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt. To deploy these changes to our Services server (where Woodhouse lives) just pull the new image and spin up a new container.
+
