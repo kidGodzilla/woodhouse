@@ -41,6 +41,6 @@ module.exports = (robot) ->
         reply = msg.random replies
         msg.send reply
 
-    robot.hear /((.*) ("+abuses+" ("+_name+")))/i, (msg) ->
+    robot.hear /((.*) ("+abuses+" (.*) ("+_name+")))/i, (msg) ->
         reply = msg.random replies
         msg.send reply
