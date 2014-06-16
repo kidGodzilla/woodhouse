@@ -61,15 +61,9 @@ RUN npm install --save htmlparser
 RUN npm install --save soupselect
 RUN npm install --save wolfram
 
-######################
-## Plugin Variables ##
-######################
+## Set plugin Variables
 ENV HUBOT_ANNOUNCE_ROOMS general, product, random, templates, website
 ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
-
-
-# Where shall he live?
-EXPOSE 5555
 
 # Set up Supervisor
 RUN mkdir -p /var/log/supervisor
@@ -77,6 +71,9 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Clean up apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Where shall he live?
+EXPOSE 5555
 
 # Start him up! (see supervisord.conf for runtime settings)
 CMD ["supervisord", "-n"]
