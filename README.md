@@ -9,7 +9,7 @@ Here's a non-exhaustive list of some of the things Woodhouse can do for you:
 
 - Give you wise councel. Just ask ```what should I do about...``` or ```how do you handle...``` or simply ```I need some advice```.
 
-- Solve all your problems. Just ask ```how do I...``` and Woodhouse will scour StackOverflow for the answer.
+- Solve all your problems. Just ask ```how do I...``` and Woodhouse will find the answer on StackOverflow.
 
 - Fetch the IP address of his server. ```woodhouse ip``` will do the trick.
 
@@ -31,7 +31,7 @@ Here's a non-exhaustive list of some of the things Woodhouse can do for you:
 
 - Remember what you told him. Forgot what you told Woodhouse to do? Get angry, ```woodhouse !!```.
 
-- QUOTE ARCHER!! Woodhouse can't resist, whenever he hears his old master's name he just has to blurt out a pearl of wisdom.
+- QUOTE ARCHER! Woodhouse can't resist, whenever he hears his old master's name he just has to blurt out a pearl of wisdom.
 
 
 
@@ -70,6 +70,9 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 ## Updating
 Woodhouse is deployed as a self-contained Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt.
 
-To deploy these changes to our Services server (where Woodhouse lives), ssh in and ```woodhouse-update```. This is just a bash alias for the following beast:
+To deploy these changes to our Services server (where Woodhouse lives), ssh in and ```woodhouse-update```. This is just a bash alias for the following (strung together):
 
-```docker pull simpla/woodhouse && docker stop $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1 && docker rm $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1 && docker run -d -p 5555:5555 simpla/woodhouse```
+```docker pull simpla/woodhouse```
+```docker stop $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1```
+```docker rm $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1```
+```docker run -d -p 5555:5555 simpla/woodhouse```
