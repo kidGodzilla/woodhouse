@@ -1,7 +1,7 @@
 # Woodhouse, our very own cyborg butler.
 
-# Extend from official Ubuntu base
-FROM ubuntu
+# Extend from official Ubuntu 14.04 LTS
+FROM ubuntu:trusty
 
 # We maintain this bad boy!
 MAINTAINER Simpla <admin@getsimpla.com>
