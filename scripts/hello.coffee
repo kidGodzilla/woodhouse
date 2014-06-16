@@ -25,6 +25,6 @@ module.exports = (robot) ->
         hello = msg.random greetings
         msg.send hello.replace "%", msg.message.user.name
 
-    robot.hear /(hi|hello|good day|good morning|morning|afternoon) ("+_name+")/i, (msg) ->
+    robot.hear /(hi|hello|good day|good morning|morning|afternoon) (.*) ("+_name+")/i, (msg) ->
         hello = msg.random greetings
         msg.send hello.replace "%", msg.message.user.name
