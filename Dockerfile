@@ -47,7 +47,7 @@ RUN chmod 755 bin/hubot
 RUN npm install  --save hubot-slack
 ENV HUBOT_SLACK_TOKEN v1U13cHqv4AROYgpCig2kYGe
 ENV HUBOT_SLACK_TEAM simpla
-ENV HUBOT_SLACK_BOTNAME Woodhouse
+ENV HUBOT_SLACK_BOTNAME woodhouse
 ENV HUBOT_SLACK_LINK_NAMES 1
 
 # Throw in scripts and plugins
@@ -68,8 +68,7 @@ ENV HUBOT_ANNOUNCE_ROOMS general, product, random, templates, website
 ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
 
 
-# Where shall he listen?
-ENV PORT 5555
+# Where shall he live?
 EXPOSE 5555
 
 # Set up Supervisor
