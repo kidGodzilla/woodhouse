@@ -19,7 +19,6 @@ RUN apt-get -y upgrade
 
 # Install core dependencies
 RUN apt-get install -y wget \
-                       git \
                        redis-server \
                        nodejs \
                        npm \
@@ -66,7 +65,7 @@ RUN npm install --save wolfram
 ######################
 ## Plugin Variables ##
 ######################
-ENV HUBOT_ANNOUNCE_ROOMS #general, #product, #random, #templates, #website
+ENV HUBOT_ANNOUNCE_ROOMS general, product, random, templates, website
 ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
 
 
