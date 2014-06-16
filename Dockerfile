@@ -23,7 +23,6 @@ RUN apt-get install -y wget \
                        nodejs \
                        npm \
                        supervisor \
-                       build-essential \
                        python \
                        libexpat1-dev \
                        libexpat1 \
