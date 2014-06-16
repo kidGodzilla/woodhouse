@@ -1,6 +1,6 @@
 # Meet Woodhouse
 
-This is Woodhouse, our own private cyborg butler/servant. He's built on Github's [HUBOT](https://hubot.github.com/), runs on our Services server in his own Docker container, and talks to us on Slack.
+This is Woodhouse, our personal cyborg butler. He's built on Github's [HUBOT](https://hubot.github.com/), runs on our Services server in his own Docker container, and talks to us on Slack.
 
 ## What He Can Do
 Here's a non-exhaustive list of some of the things Woodhouse can do for you:
