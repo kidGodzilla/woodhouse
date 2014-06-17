@@ -68,8 +68,4 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 
 
 ## Updating
-Woodhouse is deployed as a self-contained Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt.
-
-To deploy these changes to our Services server (where Woodhouse lives), ssh in and ```woodhouse-update```. This is just a bash alias for this beast:  
-  
-```docker pull simpla/woodhouse; docker stop $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1; docker rm $(docker ps -a | grep "woodhouse" | awk '\''{print $1}'\'') > /dev/null 2>&1; docker run -d -p 5555:5555 simpla/woodhouse```
+Woodhouse is deployed as a self-contained Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt. To deploy changes to our Services server (where Woodhouse lives), just ssh in and ```woodhouse-update```.
