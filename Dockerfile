@@ -52,14 +52,14 @@ ADD hubot-scripts.json hubot-scripts.json
 ADD scripts/ scripts/
 
 # Install dependencies
-RUN npm install --save cleverbot-node
+#RUN npm install --save cleverbot-node
 RUN npm install --save scraper
 RUN npm install --save htmlparser
 RUN npm install --save soupselect
 RUN npm install --save wolfram
 
 ## Set plugin Variables
-ENV HUBOT_ANNOUNCE_ROOMS general, product, random, templates, website
+ENV HUBOT_ANNOUNCE_ROOMS general,product,random,templates,website
 ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
 
 # Set up Supervisor
