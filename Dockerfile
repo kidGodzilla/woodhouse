@@ -10,9 +10,6 @@ MAINTAINER Simpla <admin@getsimpla.com>
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -sf /bin/true /sbin/initctl
 
-# Let the container know that there is no tty
-ENV DEBIAN_FRONTEND noninteractive
-
 # Update everything
 RUN apt-get update
 RUN apt-get -y upgrade
