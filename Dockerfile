@@ -23,7 +23,8 @@ RUN apt-get install -y wget \
                        python \
                        libexpat1-dev \
                        libexpat1 \
-                       libicu-dev
+                       libicu-dev \
+                       git
 
 # Sanity name node
 RUN ln -s /usr/bin/nodejs /usr/bin/node
@@ -41,10 +42,10 @@ RUN npm install
 RUN chmod 755 bin/hubot
 
 # Set up IRC-Slack integration
-RUN npm install  --save hubot-irc
+RUN npm install --save hubot-irc
 ENV HUBOT_IRC_SERVER simpla.irc.slack.com
 ENV HUBOT_IRC_ROOMS #random
-ENV HUBOT_IRC_NICK woodhouse
+ENV HUBOT_IRC_NICK hubot
 ENV HUBOT_IRC_PASSWORD simpla.uINNybfDNFJoErCE9sNp
 
 # Archive slack settings... for now
