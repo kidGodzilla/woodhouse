@@ -44,6 +44,8 @@ Scripting for Woodhouse is very straightforward, and using the basic handlers he
 
 Anything that can be automated programmatically can be automated with Woodhouse, probably in a much more fun and interactive way. So get scripting!
 
+**NOTE:** Woodhouse is currently public (to avoid paying $7/month for private repos at Docker Hub). So don't put anything sensitive (as an environment variable, for instance) in a plugin just yet. Gather up all those no-go plugins and once we have enough to justify $7/month we'll move to private repos (would also be nice to have environments private, just in case).
+
 #### Some plugin ideas to get the ball rolling...
 
 - Handle commands mid-sentance (trims and processes rest as command)
@@ -71,3 +73,6 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 
 ## Updating
 Woodhouse is deployed as a self-contained Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt. To deploy changes to our Services server (where Woodhouse lives), just ssh in and ```woodhouse-update```.
+
+## A Note on Slack
+The provided Slack adapter for Hubot creates a chat-bot, similar to the notification 'bots' that Bitbucket, redbooth, etc. use. This is not ideal, since it means Woodhouse doesn't show up in user lists and can't be direct messaged. Slack are apparently working on adding this functionality, but for now we're using the hubot-irc extension, giving Woodhouse his very own user! Yep, we're letting him think he's people. Criminal.
