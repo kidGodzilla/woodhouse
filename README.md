@@ -21,6 +21,8 @@ Here's a non-exhaustive list of some of the things Woodhouse can do for you:
 
 - Make announcements. Just tell Woodhouse to ```announce <message>``` and he'll post your message to all chat rooms at once.
 
+- Summarise anything. Need a quick overview of a topic? Just ```woodhouse abstract <topic>``` and he'll give you the jist
+
 - Bend to your will. Oh, Woodhouse won't/can't do something? Just ```woodhouse sudo <do anything you want>``` (thanks [xkcd](http://xkcd.com/149/)).
 
 - Give the true meaning of things. When you ask Woodhouse ```what is <thing>``` he'll go look it up in Urban Dictionary and tell you how it is.
