@@ -45,7 +45,7 @@ RUN chmod 755 bin/hubot
 RUN npm install --save hubot-irc
 ENV HUBOT_IRC_SERVER simpla.irc.slack.com
 ENV HUBOT_IRC_ROOMS #random
-ENV HUBOT_IRC_NICK hubot
+ENV HUBOT_IRC_NICK woodhouse
 ENV HUBOT_IRC_PASSWORD simpla.uINNybfDNFJoErCE9sNp
 
 # Throw in scripts and plugins
