@@ -41,25 +41,19 @@ RUN npm install
 # Make sure permissions are okay
 RUN chmod 755 bin/hubot
 
-# Set up IRC-Slack integration
+# Set up IRC for Slack
 RUN npm install --save hubot-irc
 ENV HUBOT_IRC_SERVER simpla.irc.slack.com
 ENV HUBOT_IRC_ROOMS #random
 ENV HUBOT_IRC_NICK hubot
 ENV HUBOT_IRC_PASSWORD simpla.uINNybfDNFJoErCE9sNp
 
-# Archive slack settings... for now
-#ENV HUBOT_SLACK_TOKEN v1U13cHqv4AROYgpCig2kYGe
-#ENV HUBOT_SLACK_TEAM simpla
-#ENV HUBOT_SLACK_BOTNAME woodhouse
-#ENV HUBOT_SLACK_LINK_NAMES 1
-
 # Throw in scripts and plugins
 ADD hubot-scripts.json hubot-scripts.json
 ADD scripts/ scripts/
 
 # Install dependencies
-#RUN npm install --save cleverbot-node
+RUN npm install --save cleverbot-node
 RUN npm install --save scraper
 RUN npm install --save htmlparser
 RUN npm install --save soupselect
@@ -76,7 +70,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Clean up apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Where shall he live?
+# Give him an ear to the world
 EXPOSE 5555
 ENV PORT 5555
 

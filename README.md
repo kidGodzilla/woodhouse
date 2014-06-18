@@ -48,14 +48,18 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 
 #### Some plugin ideas to get the ball rolling...
 
-- Handle commands mid-sentance (trims and processes rest as command)
-
+- Hear name and respond (route to cleverbot?)
+  
 - Deploy (send to drone and then production)
 
 - Query git project, find latest commit, etc.
 
-- Build status of X project
-
+- Build status of X project  
+  
+- Fetch NewRelic data  
+  
+- Fetch metrics  
+  
 - Deployment messages, interactive
 
 - Revenue, etc. reports (later)
@@ -74,5 +78,6 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 ## Updating
 Woodhouse is deployed as a self-contained Docker image, maintained as an Automated Build on our Docker Hub repo. This means that every time you push to this repo the image is automatically rebuilt. To deploy changes to our Services server (where Woodhouse lives), just ssh in and ```woodhouse-update```.
 
+
 ## A Note on Slack
-The provided Slack adapter for Hubot creates a chat-bot, similar to the notification 'bots' that Bitbucket, redbooth, etc. use. This is not ideal, since it means Woodhouse doesn't show up in user lists and can't be direct messaged. Slack are apparently working on adding this functionality, but for now we're using the hubot-irc extension, giving Woodhouse his very own user! Yep, we're letting him think he's people. Criminal.
+The provided Slack adapter for Hubot creates a bot, similar to the notification bots that Bitbucket, redbooth, etc. use. This is not ideal, since it means Woodhouse doesn't show up in user lists and can't be direct-messaged. Slack are apparently [working on adding this functionality](https://github.com/tinyspeck/hubot-slack/issues/16), but for now we're using the hubot-irc extension, giving Woodhouse his very own user account with Slack (at admin@getsimpla.com). Yep, we're letting him think he's people. Criminal. This does however mean that we're using up one more user on our Slack account (which means $5/month extra when we start paying down the line). So we may end up switching back to the official Slack extension in the future, which also allows for formatting of complex messages (server stats, whatever), etc.
