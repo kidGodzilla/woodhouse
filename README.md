@@ -7,7 +7,7 @@ Here's a non-exhaustive list of some of the things Woodhouse can do for you:
 
 - Converse. Woodhouse is smarter than he looks, say hello and he'll greet you back, abuse him and he'll do his best to grin and bear it, just talk to him in general and he'll say something clever (literally, any unhandled exceptions get routed to an auxilliary [Cleverbot](http://cleverbot.com) brain)
 
-- Give you wise councel. Just ask ```what should I do about...``` or ```how do you handle...``` or simply ```I need some advice```.
+- Give you wise counsel. Just ask ```what should I do about...``` or ```how do you handle...``` or simply ```I need some advice```.
 
 - Solve all your problems. Just ask ```how do I...``` and Woodhouse will find the answer on StackOverflow.
 
