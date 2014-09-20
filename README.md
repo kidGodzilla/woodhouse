@@ -47,8 +47,6 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 **NOTE:** Woodhouse is currently public (to avoid paying $7/month for private repos at Docker Hub). So don't put anything sensitive (as an environment variable, for instance) in a plugin just yet. Gather up all those no-go plugins and once we have enough to justify $7/month we'll move to private repos (would also be nice to have environments private, just in case).
 
 #### Some plugin ideas to get the ball rolling...
-
-- Hear name and respond (route to cleverbot?)
   
 - Deploy (send to drone and then production)
 
