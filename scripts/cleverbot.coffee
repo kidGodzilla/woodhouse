@@ -21,7 +21,7 @@ module.exports = (robot) ->
   robot.catchAll (msg) ->
     search = new RegExp("(.*)(" + robot.alias + "|" + robot.name + ")(.*)", "i")
     if msg.message.text and msg.message.text.match(search)
-        sessionKey = msg.message.room or msg.message.user.name or "sean" or "bede"
+        sessionKey = msg.message.room or msg.message.user.name
         if not bot_sessions[sessionKey]?
             bot_sessions[sessionKey] = new cleverbot()
         c = bot_sessions[sessionKey]

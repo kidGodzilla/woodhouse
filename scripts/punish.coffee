@@ -13,16 +13,16 @@
 
 module.exports = (robot) ->
   robot.respond /(.*)punish(.*)/i, (msg) ->
-    msg.send "I shall fetch the spiderwebs, sir"
+    msg.send "I shall fetch the spiderwebs!"
     msg.finish()
 
   listen_punish = new RegExp("(.*)punish(.*)(" + robot.alias + "|" + robot.name + ")(.*)", "i")
   robot.hear listen_punish, (msg) ->
-    msg.send "I shall fetch the spiderwebs, sir"
+    msg.send "Wonderful! I shall fetch the spiderwebs at once"
     msg.finish()
 
   robot.respond /(.*)spiderwebs(.*)/i, (msg) ->
-    msg.send "I know, sir"
+    msg.send "I am beginning to enjoy them sir"
     msg.finish()
 
   listen_spiderwebs = new RegExp("((.*)" + robot.name + "(.*)spiderwebs(.*))|((.*)spiderwebs(.*)"+ robot.name + "(.*))", "i")

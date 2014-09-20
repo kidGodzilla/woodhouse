@@ -44,6 +44,7 @@ RUN chmod 755 bin/hubot
 # Set up IRC for Slack
 RUN npm install --save hubot-irc
 ENV HUBOT_IRC_SERVER simpla.irc.slack.com
+ENV HUBOT_IRC_ROOMS #admin
 ENV HUBOT_IRC_NICK woodhouse
 ENV HUBOT_IRC_PASSWORD simpla.uINNybfDNFJoErCE9sNp
 
@@ -59,7 +60,7 @@ RUN npm install --save soupselect
 RUN npm install --save wolfram
 
 ## Set plugin Variables
-ENV HUBOT_ANNOUNCE_ROOMS admin, app
+ENV HUBOT_ANNOUNCE_ROOMS admin, app, outreach
 ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
 
 # Set up Supervisor
