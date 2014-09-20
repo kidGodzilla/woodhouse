@@ -16,7 +16,7 @@ module.exports = (robot) ->
     msg.send "I shall fetch the spiderwebs, sir"
     msg.finish()
 
-  listen_punish = new RegExp("(.*)punish(.*)("+ robot.name + ")(.*)", "i")
+  listen_punish = new RegExp("(.*)punish(.*)(" + robot.alias + "|" + robot.name + ")(.*)", "i")
   robot.hear listen_punish, (msg) ->
     msg.send "I shall fetch the spiderwebs, sir"
     msg.finish()

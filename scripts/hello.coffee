@@ -34,7 +34,7 @@ replies = [
 greetings = salutations.join("|")
 
 module.exports = (robot) ->
-  listen_hello = new RegExp("(.*)(" + greetings + ")(.*)(" + robot.name + ")(.*)", "i")
+  listen_hello = new RegExp("(.*)(" + greetings + ")(.*)(" + robot.alias + "|" + robot.name + ")(.*)", "i")
   robot.hear listen_hello, (msg) ->
     reply = msg.random(replies)
     msg.send(reply)

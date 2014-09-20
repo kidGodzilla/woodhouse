@@ -44,7 +44,7 @@ replies = [
 abuse = insults.join("|")
 
 module.exports = (robot) ->
-  listen_abuse = new RegExp("((.*)(" + robot.name + ")(.*)(" + abuse + ")(.*))|((.*)(" + abuse + ")(.*)(" + robot.name + ")(.*))", "i")
+  listen_abuse = new RegExp("((.*)(" + robot.alias + "|" + robot.name + ")(.*)(" + abuse + ")(.*))|((.*)(" + abuse + ")(.*)(" + robot.alias + "|" + robot.name + ")(.*))", "i")
   robot.hear listen_abuse, (msg) ->
     reply = msg.random(replies)
     msg.send(reply)
