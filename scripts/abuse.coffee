@@ -30,7 +30,7 @@ insults = [
     "wanker"
 ]
 
-yessirs = [
+replies = [
     "Very good, sir",
     "As you wish, sir",
     "Yes, sir",
@@ -44,7 +44,14 @@ yessirs = [
 abuse = insults.join("|")
 
 module.exports = (robot) ->
-  listen_abuse = new RegExp("(.*)" + robot.name + "(.*)?" + abuse + "(.*)", "i")
+  listen_abuse = new RegExp("((.*)(" + robot.name + ")(.*)(" + abuse + ")(.*))|((.*)(" + abuse + ")(.*)(" + robot.name + ")(.*))", "i")
   robot.hear listen_abuse, (msg) ->
-    yessir = msg.random(yessirs)
-    msg.send(yessir)
+    reply = msg.random(replies)
+    msg.send(reply)
+    msg.finish()
+
+  respond_abuse = new RegExp("(.*)(" + abuse + ")(.*)", "i")
+  robot.respond respond_abuse, (msg) ->
+    reply = msg.random(replies)
+    msg.send(reply)
+    msg.finish()
