@@ -74,5 +74,5 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 5555
 ENV PORT 5555
 
-# Start him up! (see supervisord.conf for runtime settings)
+# Start him up!
 CMD ["supervisord"]
