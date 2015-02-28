@@ -17,7 +17,7 @@ Woodhouse is a cyborg abomination of many talents. Right out of the box he can:
 
 - Pass on messages for you. ```Woodhouse tell @name <message>```
 
-- Stop you using wanky startup jargon. Wanna talk about running lean with an agile 30000 foot view of our runway ramping up to MVP? Woodhouse will throw a cat at you.
+- Stop you using wanky startup jargon. Wanna talk about our strategic customer centric value add that helps with onboarding prospects through our sales pipeline by offering great ROI at its price point? Woodhouse will throw cats at you.
 
 - Generate all the memes. Just about any sane ```<optional inputs> [meme name] <optional inputs>``` you throw at him will get you an awesome customised meme. Full list [here](https://github.com/github/hubot-scripts/blob/master/src/scripts/meme_captain.coffee).
 
