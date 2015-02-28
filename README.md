@@ -31,8 +31,6 @@ Woodhouse is a cyborg abomination of many talents. Right out of the box he can:
 
 - Give the true meaning of things. When you ask Woodhouse ```what is <thing>``` he’ll go look it up in Urban Dictionary and tell you how it is.
 
-- Help you procrastinate with meaningless crap, just ask him to ```9gag me```.
-
 - Remind you who the real badass here is, bring up ```chuck norris``` with him, or to see how others stack up, ```woodhouse chuck norris me <user>```.
 
 - Remember what you told him. Forgot what you told Woodhouse to do? Get angry, ```woodhouse !!```.

@@ -6,9 +6,7 @@
   "description": "You called, sir?",
   "dependencies": {
     "cleverbot-node": "^0.1.8",
-    "htmlparser": "^1.7.7",
     "hubot": "^2.11.1",
-    "hubot-9gag": "^0.2.0",
     "hubot-ambush": "0.0.3",
     "hubot-business-cat": "^1.1.15",
     "hubot-diagnostics": "0.0.1",
@@ -22,6 +20,7 @@
     "hubot-slack": "^3.3.0",
     "hubot-soon": "^1.0.0",
     "hubot-tell": "^1.2.3",
+    "redis": "^0.12.1",
     "scraper": "0.0.9",
     "soupselect": "^0.2.0"
   },

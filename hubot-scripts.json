@@ -4,7 +4,6 @@
 "calm-down.coffee",
 "conversation.coffee",
 "dealwithit.coffee",
-"howdoi.coffee",
 "chuck-norris.coffee",
 "illogical.coffee",
 "ip.coffee",
@@ -16,6 +15,5 @@
 "announce.coffee",
 "sudo.coffee",
 "urban.coffee",
-"archer.coffee",
 "bang-bang.coffee"
 ]
