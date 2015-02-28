@@ -1,5 +1,3 @@
-# Woodhouse, our very own cyborg butler.
-
 # Extend from official Ubuntu 14.04 LTS
 FROM ubuntu:trusty
 
@@ -29,39 +27,14 @@ RUN apt-get install -y wget \
 # Sanity name node
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
-# Install HUBOT engine and coffee-script
-RUN npm install -g hubot coffee-script
-
-# It's alive!
-RUN hubot --create .
-
-# Get Woodhouse settled in
-RUN npm install
+# Move Woodhouse into his new home
+ADD . /
 
 # Make sure permissions are okay
 RUN chmod 755 bin/hubot
 
-# Set up IRC for Slack
-RUN npm install --save hubot-irc
-ENV HUBOT_IRC_SERVER simpla.irc.slack.com
-ENV HUBOT_IRC_ROOMS #admin
-ENV HUBOT_IRC_NICK woodhouse
-ENV HUBOT_IRC_PASSWORD simpla.uINNybfDNFJoErCE9sNp
-
-# Throw in scripts and plugins
-ADD hubot-scripts.json hubot-scripts.json
-ADD scripts/ scripts/
-
-# Install dependencies
-RUN npm install --save cleverbot-node
-RUN npm install --save scraper
-RUN npm install --save htmlparser
-RUN npm install --save soupselect
-RUN npm install --save wolfram
-
-## Set plugin Variables
-ENV HUBOT_ANNOUNCE_ROOMS admin, app, outreach
-ENV HUBOT_WOLFRAM_APPID YXYG8G-YPGR69XE27
+# Get Woodhouse settled in
+RUN npm install
 
 # Set up Supervisor
 RUN mkdir -p /var/log/supervisor

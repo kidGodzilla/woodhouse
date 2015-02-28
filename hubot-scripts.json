@@ -1,9 +1,6 @@
 [
-"redis-brain.coffee",
-"shipit.coffee",
 "advice.coffee",
 "abstract.coffee",
-"ambush.coffee",
 "calm-down.coffee",
 "conversation.coffee",
 "dealwithit.coffee",
@@ -20,6 +17,5 @@
 "sudo.coffee",
 "urban.coffee",
 "archer.coffee",
-"9gag.coffee",
 "bang-bang.coffee"
 ]

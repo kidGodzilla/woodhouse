@@ -1,5 +1,5 @@
 # Description:
-#   "Makes Woodhouse even more Clever™"
+#   "Make Woodhouse even more Clever™"
 #
 # Dependencies:
 #   "cleverbot-node": "0.1.1"

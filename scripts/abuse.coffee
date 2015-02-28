@@ -22,7 +22,6 @@ insults = [
     "bugger off",
     "piss off",
     "dickhead",
-    "cunt",
     "will end you",
     "will kill you",
     "eat a dick",
