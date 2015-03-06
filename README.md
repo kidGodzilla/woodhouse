@@ -72,7 +72,3 @@ Anything that can be automated programmatically can be automated with Woodhouse,
 - Hook into Google alerts and alert when Simpla mentioned in press
 
 - Interface with servers (backup, etc.)
-
-
-## Updating
-Woodhouse is hosted as an Automated Build on Docker Hub at [simpla/woodhouse](https://registry.hub.docker.com/u/simpla/woodhouse/). To deploy changes to Simpla’s Services server (where Woodhouse lives), just ssh in and ```woodhouse-update```.
