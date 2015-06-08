@@ -1,15 +1,13 @@
 # Meet Woodhouse
 
-This is Woodhouse, a dockerised cyborg butler built on Github’s [HUBOT](https://hubot.github.com/), he can keep you company on Slack.
+This is Woodhouse, a dockerised cyborg butler built on [HUBOT](https://hubot.github.com/), he keeps us company on Slack.
 
 ## What He Can Do
-Woodhouse is a cyborg abomination of many talents. Right out of the box he can: 
+Woodhouse has many talents. Right out of the box he can: 
 
-- Converse. Woodhouse is smarter than he looks, say hello and he’ll greet you back, abuse him and he’ll do his best to grin and bear it, just talk to him and he’ll say something clever (literally, any unhandled exceptions get routed to an auxiliary [Cleverbot](http://cleverbot.com) instance).
+- Converse. Woodhouse is smarter than he looks, say hello and he’ll greet you back, abuse him and he’ll do his best to grin and bear it, just talk to him and he’ll say something clever (literally, any unhandled exceptions get routed to a [Cleverbot](http://cleverbot.com) instance).
 
 - Give you wise counsel. Ask ```what should I do about…``` or ```how do you handle…``` or simply ```I need some advice```.
-
-- Solve all your problems. Ask ```how do I…``` and Woodhouse will find the answer on StackOverflow.
 
 - Fetch the IP address of his server. ```ip``` will do the trick.
 
@@ -17,7 +15,7 @@ Woodhouse is a cyborg abomination of many talents. Right out of the box he can:
 
 - Pass on messages for you. ```Woodhouse tell @name <message>```
 
-- Stop you using wanky startup jargon. Wanna talk about our strategic customer centric value add that helps with onboarding prospects through our sales pipeline by offering great ROI at its price point? Woodhouse will throw cats at you.
+- Stop you using startup jargon. Wanna talk about our strategic customer centric value add that helps with onboarding prospects through our sales pipeline by offering great ROI at its price point? Woodhouse will throw cats at you.
 
 - Generate all the memes. Just about any sane ```<optional inputs> [meme name] <optional inputs>``` you throw at him will get you an awesome customised meme. Full list [here](https://github.com/github/hubot-scripts/blob/master/src/scripts/meme_captain.coffee).
 
@@ -45,30 +43,8 @@ Woodhouse needs some environment variables to be set at runtime with docker:
 - HUBOT_ANNOUNCE_ROOMS - Comma separated list of rooms Woodhouse will `announce` to.
  
 ## Extending Woodhouse
-Please contribute to Woodhouse! He is incredibly easy to extend. Any ```.coffee``` or ```.js``` script found in ```scripts/``` is processed at runtime and run as a plugin. Almost all of Woodhouse’s functionality comes from such scripts. Additionally, 3rd party plugins (see full list [here](http://hubot-script-catalog.herokuapp.com)) can be entered into the array in ```hubot-scripts.json``` to be installed during the next Docker build (be sure to define all dependencies and environment variables in the Dockerfile though).
+Woodhouse is incredibly easy to extend. Any ```.coffee``` or ```.js``` script found in ```scripts/``` is processed at runtime and run as a plugin. 3rd party plugins (see full list [here](http://hubot-script-catalog.herokuapp.com)) can be entered into the array in ```hubot-scripts.json``` to be installed during the next Docker build (be sure to define all dependencies and environment variables in the Dockerfile though).
 
 Scripting for Woodhouse is very straightforward, and using the basic handlers he has (plus some regex) can yield some surprisingly sophisticated behaviour. Have a look through the existing scripts, and skim over a simple guide like [this one](http://theprogrammingbutler.com/blog/archives/2011/10/28/hubot-scripts-explained/).
 
-Anything that can be automated programmatically can be automated with Woodhouse, probably in a much more fun and interactive way. So get scripting!
-
-**NOTE:** Woodhouse is currently public. So don’t put anything sensitive about Simpla in a plugin or the Dockerfile.
-
-#### Some plugin ideas to get the ball rolling…
-  
-- Deploy (send to drone and then production)
-
-- Query git project, find latest commit, etc.
-
-- Build status of X project  
-  
-- Fetch NewRelic data  
-  
-- Fetch metrics  
-  
-- Deployment messages, interactive
-
-- Revenue, etc. reports (later)
-
-- Hook into Google alerts and alert when Simpla mentioned in press
-
-- Interface with servers (backup, etc.)
+Anything that can be automated programmatically can be automated with Woodhouse, probably in a much more fun and interactive way.
